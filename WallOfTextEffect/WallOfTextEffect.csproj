@@ -1,0 +1,94 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0-windows7.0</TargetFramework>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWindowsForms>true</UseWindowsForms>
+    <UseWpf>true</UseWpf>
+    <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <RootNamespace>WallOfTextEffect</RootNamespace>
+    <AssemblyName>WallOfText</AssemblyName>
+    <Deterministic>false</Deterministic>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="WallOfText.png" />
+    <EmbeddedResource Include="WallOfText.sample.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="ComputeSharp.D2D1">
+      <HintPath>C:\paint.net.5.1.portable.x64\ComputeSharp.D2D1.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="paintdotnet">
+      <HintPath>C:\paint.net.5.1.portable.x64\paintdotnet.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PaintDotNet.Base">
+      <HintPath>C:\paint.net.5.1.portable.x64\PaintDotNet.Base.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PaintDotNet.Collections">
+      <HintPath>C:\paint.net.5.1.portable.x64\PaintDotNet.Collections.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PaintDotNet.ComponentModel">
+      <HintPath>C:\paint.net.5.1.portable.x64\PaintDotNet.ComponentModel.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PaintDotNet.Core">
+      <HintPath>C:\paint.net.5.1.portable.x64\PaintDotNet.Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PaintDotNet.Data">
+      <HintPath>C:\paint.net.5.1.portable.x64\PaintDotNet.Data.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PaintDotNet.Effects">
+      <HintPath>C:\paint.net.5.1.portable.x64\PaintDotNet.Effects.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PaintDotNet.Effects.Core">
+      <HintPath>C:\paint.net.5.1.portable.x64\PaintDotNet.Effects.Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PaintDotNet.Effects.Gpu">
+      <HintPath>C:\paint.net.5.1.portable.x64\PaintDotNet.Effects.Gpu.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PaintDotNet.Effects.Legacy">
+      <HintPath>C:\paint.net.5.1.portable.x64\PaintDotNet.Effects.Legacy.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PaintDotNet.Fundamentals">
+      <HintPath>C:\paint.net.5.1.portable.x64\PaintDotNet.Fundamentals.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PaintDotNet.Primitives">
+      <HintPath>C:\paint.net.5.1.portable.x64\PaintDotNet.Primitives.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PaintDotNet.PropertySystem">
+      <HintPath>C:\paint.net.5.1.portable.x64\PaintDotNet.PropertySystem.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PaintDotNet.Windows">
+      <HintPath>C:\paint.net.5.1.portable.x64\PaintDotNet.Windows.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PaintDotNet.Windows.Core">
+      <HintPath>C:\paint.net.5.1.portable.x64\PaintDotNet.Windows.Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="PaintDotNet.Windows.Framework">
+      <HintPath>C:\paint.net.5.1.portable.x64\PaintDotNet.Windows.Framework.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="XCOPY &quot;$(TargetDir)WallOfText.dll&quot; &quot;C:\Users\Robyn\OneDrive\Documents\paint.net App Files\Effects&quot; /S /Y&#xD;&#xA;XCOPY &quot;$(TargetDir)WallOfText.pdb&quot; &quot;C:\Users\Robyn\OneDrive\Documents\paint.net App Files\Effects&quot; /S /Y" />
+  </Target>
+</Project>

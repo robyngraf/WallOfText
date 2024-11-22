@@ -1,0 +1,25 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 16
+VisualStudioVersion = 16.0.31515.178
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{11dcc4e0-c041-42a7-9132-ce42d2d1e538}") = "WallOfTextEffect", "WallOfTextEffect\WallOfTextEffect.csproj", "{b9422083-b733-495e-b202-357cefb2c313}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{b9422083-b733-495e-b202-357cefb2c313}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{b9422083-b733-495e-b202-357cefb2c313}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{b9422083-b733-495e-b202-357cefb2c313}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{b9422083-b733-495e-b202-357cefb2c313}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6925cfaf-12b7-44c6-ae17-3ebcddadbad2}
+	EndGlobalSection
+EndGlobal
